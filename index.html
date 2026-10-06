@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Arthur Lavarini, estudante de TI. Projetos em HTML, CSS, JavaScript e mais.">
+  <title>Arthur Lavarini | Estudante de TI</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Schibsted+Grotesk:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    document.documentElement.dataset.theme = localStorage.getItem('tema') || 'dark';
+  </script>
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a href="#inicio" class="nav__logo">&lt;AL/&gt;</a>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ativar modo escuro">
+          <svg class="theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          <svg class="theme-toggle__sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+          <span class="nav__bar"></span>
+          <span class="nav__bar"></span>
+          <span class="nav__bar"></span>
+        </button>
+      </div>
+
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#inicio" class="nav__link nav__link--active">Início</a></li>
+        <li><a href="#sobre" class="nav__link">Sobre</a></li>
+        <li><a href="#habilidades" class="nav__link">Habilidades</a></li>
+        <li><a href="#projetos" class="nav__link">Projetos</a></li>
+        <li><a href="#contato" class="nav__link">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="inicio">
+      <div class="container hero__inner">
+        <h1 class="hero__title">
+          <span class="hero__name">Arthur Lavarini</span>
+          <span class="hero__role"><mark class="hero__mark">Estudante de TI</mark> no Colégio Cotemig</span>
+        </h1>
+        <p class="hero__desc">
+          Desenvolvimento web ágil impulsionado por uma stack completa
+        </p>
+        <div class="hero__actions">
+          <a href="#projetos" class="btn btn--primary">Ver projetos</a>
+          <a href="#contato" class="btn btn--ghost">Fale comigo</a>
+        </div>
+        <a href="https://www.linkedin.com/in/arthur-costa-lavarini" target="_blank" rel="noopener noreferrer" class="hero__asterisk" aria-label="LinkedIn de Arthur Lavarini"><span aria-hidden="true">*</span><span class="hero__note" aria-hidden="true">me acha no LinkedIn</span></a>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container">
+        <h2 class="section__title">Sobre mim</h2>
+        <div class="about">
+          <figure class="about__figure">
+            <img src="assets/avatar.svg" alt="Foto de Arthur Lavarini" class="about__photo">
+            <figcaption class="about__caption">Arthur Lavarini, estudante de TI</figcaption>
+          </figure>
+          <div class="about__text">
+            <p>Sou estudante de TI no Colégio Cotemig, apaixonado por tecnologia e por construir soluções que unem código bem feito e boa experiência de uso.</p>
+            <p>Tenho experiência com HTML, CSS, JavaScript, Vite, Git, Python, SQL, C# e engenharia de prompt, e estou sempre em busca de novos desafios para continuar aprendendo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="habilidades">
+      <div class="container">
+        <h2 class="section__title">Habilidades</h2>
+        <div class="skills">
+          <article class="skill-card">
+            <svg class="skill-card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16v18l-8-4-8 4z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <h3 class="skill-card__name">HTML5</h3>
+            <p class="skill-card__desc">Páginas bem estruturadas e acessíveis.</p>
+          </article>
+          <article class="skill-card">
+            <svg class="skill-card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <h3 class="skill-card__name">CSS3</h3>
+            <p class="skill-card__desc">Layouts com Flexbox e Grid que funcionam no celular e no computador.</p>
+          </article>
+          <article class="skill-card">
+            <svg class="skill-card__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 9l-3 3 3 3M16 9l3 3-3 3" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <h3 class="skill-card__name">JavaScript</h3>
+            <p class="skill-card__desc">Interatividade, manipulação do DOM e lógica no navegador.</p>
+          </article>
+          <article class="skill-card">
+            <svg class="skill-card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l9 18 9-18-9 4z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <h3 class="skill-card__name">Vite</h3>
+            <p class="skill-card__desc">Projetos front-end com build rápido e servidor de desenvolvimento.</p>
+          </article>
+          <article class="skill-card">
+            <svg class="skill-card__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="6" cy="18" r="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 9v6M8 7l8 4" stroke="currentColor" stroke-width="2"/></svg>
+            <h3 class="skill-card__name">Git &amp; GitHub</h3>
+            <p class="skill-card__desc">Versionamento, branches e publicação no GitHub Pages.</p>
+          </article>
+          <article class="skill-card">
+            <svg class="skill-card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-4 0-4 2-4 2v3h4v1H6s-3 0-3 4 3 4 3 4h2v-2.5S8 12 10.5 12h4S17 12 17 9.5V5s0-2-5-2z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 21c4 0 4-2 4-2v-3h-4v-1h6s3 0 3-4-3-4-3-4" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <h3 class="skill-card__name">Python</h3>
+            <p class="skill-card__desc">Scripts, automações e lógica de programação.</p>
+          </article>
+          <article class="skill-card">
+            <svg class="skill-card__icon" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <h3 class="skill-card__name">SQL</h3>
+            <p class="skill-card__desc">Modelagem de tabelas e consultas em bancos de dados.</p>
+          </article>
+          <article class="skill-card">
+            <svg class="skill-card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 1 0 0 8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M17 10h4M17 14h4M18.5 8.5v7M20.5 8.5v7" stroke="currentColor" stroke-width="1.5"/></svg>
+            <h3 class="skill-card__name">C#</h3>
+            <p class="skill-card__desc">Programação orientada a objetos e aplicações .NET.</p>
+          </article>
+          <article class="skill-card">
+            <svg class="skill-card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H8l-4 4z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 9h8M8 12h5" stroke="currentColor" stroke-width="2"/></svg>
+            <h3 class="skill-card__name">Engenharia de prompt</h3>
+            <p class="skill-card__desc">Uso de IA para acelerar o desenvolvimento, com prompts claros e revisão do resultado.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projetos">
+      <div class="container">
+        <h2 class="section__title">Projetos</h2>
+        <div class="projects">
+
+          <article class="project-card">
+            <img src="assets/stussy.svg" alt="Capa do projeto Stussy: Loja Virtual" class="project-card__cover">
+            <div class="project-card__body">
+              <h3 class="project-card__title">Stussy, loja virtual</h3>
+              <p class="project-card__desc">Loja virtual inspirada na Stussy. O carrinho salva os itens mesmo depois de fechar a página, mostra quanto falta para o frete grátis e leva a um checkout com os campos formatados.</p>
+              <ul class="project-card__tech" aria-label="Tecnologias usadas">
+                <li class="tag">HTML5</li><li class="tag">CSS3</li><li class="tag">JS vanilla</li><li class="tag">localStorage</li>
+              </ul>
+              <div class="project-card__links">
+                <a href="https://lavarinitop.github.io/STUSSY/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Demo</a>
+                <a href="https://github.com/LavariniTOP/STUSSY" target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--sm">Repositório</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/tabela.svg" alt="Capa do projeto Tabela Periódica Interativa" class="project-card__cover">
+            <div class="project-card__body">
+              <h3 class="project-card__title">Tabela periódica interativa</h3>
+              <p class="project-card__desc">Os 118 elementos químicos organizados como na tabela real, com uma cor para cada categoria. Ao clicar em um elemento, abre uma janela com configuração eletrônica, estado físico, pontos de fusão e ebulição, densidade e quem o descobriu.</p>
+              <ul class="project-card__tech" aria-label="Tecnologias usadas">
+                <li class="tag">HTML5</li><li class="tag">CSS3</li><li class="tag">JS vanilla</li>
+              </ul>
+              <div class="project-card__links">
+                <a href="https://lavarinitop.github.io/Tabela/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Demo</a>
+                <a href="https://github.com/LavariniTOP/Tabela" target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--sm">Repositório</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="contato">
+      <div class="container">
+        <h2 class="section__title">Contato</h2>
+        <div class="contact">
+          <form class="form" id="contactForm" novalidate>
+            <div class="form__field">
+              <label for="nome" class="form__label">Nome</label>
+              <input type="text" id="nome" name="nome" class="form__input" placeholder="Seu nome" required>
+              <small class="form__error" id="erroNome"></small>
+            </div>
+            <div class="form__field">
+              <label for="email" class="form__label">E-mail</label>
+              <input type="email" id="email" name="email" class="form__input" placeholder="seu@email.com" required>
+              <small class="form__error" id="erroEmail"></small>
+            </div>
+            <div class="form__field">
+              <label for="mensagem" class="form__label">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" class="form__input form__input--area" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+              <small class="form__error" id="erroMensagem"></small>
+            </div>
+            <button type="submit" class="btn btn--primary">Enviar mensagem</button>
+            <p class="form__success" id="formSuccess" role="status"></p>
+          </form>
+          <aside class="contact__aside">
+            <p class="contact__text">Prefere me achar por aqui?</p>
+            <a href="https://github.com/LavariniTOP" target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--block"><svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>GitHub</a>
+            <a href="https://www.linkedin.com/in/arthur-costa-lavarini" target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--block"><svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 10v7M8 7v.01M12 17v-7M12 13a3 3 0 0 1 6 0v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>LinkedIn</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">Arthur Lavarini - Portfólio</p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Voltar ao topo" hidden>↑</button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
