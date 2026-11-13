@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#060606">
+  <meta name="description" content="Portfólio de Arthur Lavarini, estudante de TI. Projetos em HTML, CSS, JavaScript e mais.">
+  <title>Arthur Lavarini | Estudante de TI</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=IBM+Plex+Mono&family=Inter:wght@350;400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <a href="#inicio" class="nav__logo" aria-label="Arthur Lavarini, início"><span class="nav__mark"></span>AL</a>
+    <span class="nav__current" id="navCurrent" aria-hidden="true">Início</span>
+    <button class="nav__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu">Menu</button>
+    <nav aria-label="Navegação principal">
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#inicio" class="nav__link">Início</a></li>
+        <li><a href="#sobre" class="nav__link">Sobre</a></li>
+        <li><a href="#habilidades" class="nav__link">Habilidades</a></li>
+        <li><a href="#projetos" class="nav__link">Projetos</a></li>
+        <li><a href="#contato" class="nav__link">Contato</a></li>
+      </ul>
+    </nav>
+    <span class="nav__dot" aria-hidden="true"></span>
+  </header>
+  <div class="clock label" aria-hidden="true"><span id="clock">--:--</span> BRT</div>
+
+  <div class="stage" id="stage" aria-hidden="true"><canvas id="scene"></canvas></div>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero__text">
+        <h1 class="display">
+          <span class="display__lead">Arthur Lavarini</span>
+          <span class="display__rest">Estudante de TI no Colégio Cotemig</span>
+        </h1>
+      </div>
+      <a href="#sobre" class="hero__scroll label">Rolar [↓]</a>
+    </section>
+
+    <section class="block" id="sobre">
+      <div class="index label"><span><b>Sobre</b> <i>01</i></span></div>
+      <p class="statement reveal">
+        <span class="statement__lead">Eu construo para a web.</span>
+        <span class="statement__rest">Código bem feito, interfaces claras e projetos que funcionam do celular ao computador.</span>
+      </p>
+      <div class="about">
+        <figure class="about__tile reveal">
+          <img src="assets/foto.jpg" alt="Foto de Arthur Lavarini" width="536" height="953" loading="lazy">
+        </figure>
+        <div class="about__text reveal">
+          <p>Sou estudante de TI no Colégio Cotemig, apaixonado por tecnologia e por construir soluções que unem código bem feito e boa experiência de uso.</p>
+          <p>Tenho experiência com HTML, CSS, JavaScript, Vite, Git, Python, SQL, C# e engenharia de prompt, e estou sempre em busca de novos desafios para continuar aprendendo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="habilidades">
+      <div class="index label"><span><b>Habilidades</b> <i>02</i></span></div>
+      <div class="skills-wrap">
+      <div class="cloud" id="cloud" aria-hidden="true"></div>
+      <ul class="skills">
+        <li class="skill reveal"><h3>HTML5</h3><p>Páginas bem estruturadas e acessíveis.</p></li>
+        <li class="skill reveal"><h3>CSS3</h3><p>Layouts com Flexbox e Grid que funcionam no celular e no computador.</p></li>
+        <li class="skill reveal"><h3>JavaScript</h3><p>Interatividade, manipulação do DOM e lógica no navegador.</p></li>
+        <li class="skill reveal"><h3>Vite</h3><p>Projetos front-end com build rápido e servidor de desenvolvimento.</p></li>
+        <li class="skill reveal"><h3>Git &amp; GitHub</h3><p>Versionamento, branches e publicação no GitHub Pages.</p></li>
+        <li class="skill reveal"><h3>Python</h3><p>Scripts, automações e lógica de programação.</p></li>
+        <li class="skill reveal"><h3>SQL</h3><p>Modelagem de tabelas e consultas em bancos de dados.</p></li>
+        <li class="skill reveal"><h3>C#</h3><p>Programação orientada a objetos e aplicações .NET.</p></li>
+        <li class="skill reveal"><h3>Engenharia de prompt</h3><p>Uso de IA para acelerar o desenvolvimento, com prompts claros e revisão do resultado.</p></li>
+      </ul>
+      </div>
+    </section>
+
+    <section class="block" id="projetos">
+      <div class="index label"><span><b>Projetos</b> <i>03</i></span><a href="https://github.com/LavariniTOP" target="_blank" rel="noopener noreferrer">[Ver todos]</a></div>
+
+      <article class="project">
+        <div class="project__info">
+          <h3 class="project__title">Stussy, loja virtual</h3>
+          <p>Loja virtual inspirada na Stussy. O carrinho salva os itens mesmo depois de fechar a página, mostra quanto falta para o frete grátis e leva a um checkout com os campos formatados.</p>
+          <ul class="tags" aria-label="Tecnologias usadas"><li>HTML5</li><li>CSS3</li><li>JS vanilla</li><li>localStorage</li></ul>
+          <div class="actions">
+            <a href="https://lavarinitop.github.io/STUSSY/" target="_blank" rel="noopener noreferrer" class="btn">Ver demo<span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/LavariniTOP/STUSSY" target="_blank" rel="noopener noreferrer" class="btn">Repositório<span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <a class="project__media" href="https://lavarinitop.github.io/STUSSY/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <img src="assets/stussy.svg" alt="" width="800" height="450" loading="lazy">
+        </a>
+      </article>
+
+      <article class="project">
+        <div class="project__info">
+          <h3 class="project__title">Tabela periódica interativa</h3>
+          <p>Os 118 elementos químicos organizados como na tabela real, com uma cor para cada categoria. Ao clicar em um elemento, abre uma janela com configuração eletrônica, estado físico, pontos de fusão e ebulição, densidade e quem o descobriu.</p>
+          <ul class="tags" aria-label="Tecnologias usadas"><li>HTML5</li><li>CSS3</li><li>JS vanilla</li></ul>
+          <div class="actions">
+            <a href="https://lavarinitop.github.io/Tabela/" target="_blank" rel="noopener noreferrer" class="btn">Ver demo<span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/LavariniTOP/Tabela" target="_blank" rel="noopener noreferrer" class="btn">Repositório<span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <a class="project__media" href="https://lavarinitop.github.io/Tabela/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <img src="assets/tabela.svg" alt="" width="800" height="450" loading="lazy">
+        </a>
+      </article>
+    </section>
+
+    <section class="block closing" id="contato">
+      <div class="index label"><span><b>Contato</b> <i>04</i></span></div>
+      <div class="closing__grid">
+        <p class="statement reveal">
+          <span class="statement__lead">Vamos construir algo.</span>
+          <span class="statement__rest">Conte o que você tem em mente e eu respondo por e-mail.</span>
+        </p>
+
+        <div class="closing__side">
+          <form class="form" id="contactForm" novalidate>
+            <div class="field">
+              <label for="nome" class="label">Nome</label>
+              <input type="text" id="nome" name="nome" autocomplete="name" placeholder="Seu nome" required>
+              <small class="field__error" id="erroNome"></small>
+            </div>
+            <div class="field">
+              <label for="email" class="label">E-mail</label>
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="seu@email.com" required>
+              <small class="field__error" id="erroEmail"></small>
+            </div>
+            <div class="field">
+              <label for="mensagem" class="label">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+              <small class="field__error" id="erroMensagem"></small>
+            </div>
+            <button type="submit" class="btn">Enviar mensagem<span aria-hidden="true">↗</span></button>
+            <p class="form__status" id="formSuccess" role="status"></p>
+          </form>
+
+          <ul class="directory">
+            <li><span class="label">GitHub</span><a href="https://github.com/LavariniTOP" target="_blank" rel="noopener noreferrer">github.com/LavariniTOP</a></li>
+            <li><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/arthur-costa-lavarini" target="_blank" rel="noopener noreferrer">arthur-costa-lavarini</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img class="footer__tile" src="assets/foto.jpg" alt="" width="96" height="96" loading="lazy">
+    <p>© 2026 Arthur Lavarini. Portfólio.</p>
+    <button class="footer__top" id="toTop" type="button">Topo [↑]</button>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="js/script.js"></script>
+  <!-- script clássico (não module): módulos são bloqueados ao abrir o index.html direto do disco (file://) -->
+  <script src="js/scene.js"></script>
+</body>
+</html>
